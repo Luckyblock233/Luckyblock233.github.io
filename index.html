@@ -3,17 +3,70 @@
 <head>
 <meta charset="utf-8">
 <script>
-  function myFunction(){
-    document.getElementById("buttom").innerHTML="Lkp！";
+  //可自定义内容：
+  names = new Array("高某某", "胡某某", "王某某", "杨某某"); //下标从零开始。
+  StartDate = '2022-10-09'; //日期格式：YYYY-MM-DD
+  function Calc(days) { //计算值日生的算法，参数为开始日期到当前日期的天数：
+    mod = Math.floor((getDateBetWeen(StartDate, customFormat()) % 8) / 2);
+    return names[mod];
   }
-  </script>
+  function GetDetails() { //用来写一些碎碎念的地方，懒得再学了，所以用了非常弱智的方法实现，给出了三行的空间。
+    document.getElementById("Details1").innerHTML = "采用的算法大致如下所示：";
+    document.getElementById("Details2").innerHTML = "计算当前天数与 2022-10-09 的天数差，天数差对 8 取余，按照取余结果分配值日生。如余数为 0、1 则高某某，2、3 则胡某某，4、5 则王某某……以此类推。";
+    document.getElementById("Details3").innerHTML = "本来想做一个能够按照所需跳过假期回家值日计算的程序的，然而买不起服务器，没法上传假期时间……就先这样用着罢";
+  }
+
+  function customFormat() {
+    var date = new Date();
+    var str = "";
+    var month = date.getMonth() + 1;
+    var day = date.getDate();
+    str += date.getFullYear().toString() + "-";
+    str += month.toString().padStart(2, '0') + "-";
+    str += day.toString().padStart(2, '0');
+    return str;
+  }
+  
+  function getDateBetWeen(startDate, endDate) { 
+    var startList = startDate.split('-'),
+    endList = endDate.split('-'),
+    date1 = new Date(),
+    date2 = new Date(),
+    date1Time,
+    date2Time,
+    result = 0;
+    date1.setUTCFullYear(startList[0], startList[1] - 1, startList[2]);
+    date2.setUTCFullYear(endList[0], endList[1] - 1, endList[2]);
+    date1Time = date1.getTime();
+    date2Time = date2.getTime(); 
+    for(var time = date1Time; time < date2Time;){
+      result = result + 1;
+      time = time + 24 * 60 * 60 * 1000;
+    }
+    return result;
+  }
+
+  function GetName() {
+    var truename = Calc(getDateBetWeen(StartDate, customFormat()));
+    document.getElementById("MyButtom").innerHTML = truename;
+    document.getElementById("MyImage").width="250";
+    document.getElementById("MyImage").height="270";
+    document.getElementById("MyImage").src = "http://tiebapic.baidu.com/forum/w%3D580/sign=7ddbb2f0c201a18bf0eb1247ae2e0761/35841da0cd11728bb11fb8fe8dfcc3cec2fd2c46.jpg?tbpicau=2022-10-11-05_4f58629fdf718fd97d5ebdc68837c2a8";
+  }
+</script>
 </head>
 
 <body>
   <center>
     <h1>今天的值日生</h1>
-    <p id="demo">会是谁呢？？？</p>
-    <p  id="buttom"> <button type="button" onclick="myFunction()">一键查询！！</button> </p>
+    <p>会是谁呢？？？</p>
+    <p id = "MyButtom"> <button type="button" onclick = "GetName()"> 一键查询！！</button> </p>
+    <p><img id = "MyImage"
+         src="http://tiebapic.baidu.com/forum/w%3D580/sign=61fc02b567cf3bc7e800cde4e101babd/563377a30cf431adcd1abd815c36acaf2cdd98c0.jpg?tbpicau=2022-10-11-05_83467583391568a43acaec876908aa55" 
+         alt="Happiness...but temporary"></p>
+    <p id = "Details1"> <button type = "button" onclick = "GetDetails()"> 展开说明 </button> </p>
+    <p id = "Details2"> </p>
+    <p id = "Details3"> </p>
   </center>  
 </body>
 </html>
