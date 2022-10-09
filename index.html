@@ -6,8 +6,9 @@
   //可自定义内容：
   names = new Array("高某某", "胡某某", "王某某", "杨某某"); //下标从零开始。
   StartDate = '2022-10-09'; //日期格式：YYYY-MM-DD
-  function Calc(days) { //计算值日生的算法，参数为开始日期到当前日期的天数：
-    mod = Math.floor((getDateBetWeen(StartDate, customFormat()) % 8) / 2);
+  function Calc() { //计算值日生的算法，参数为开始日期到当前日期的天数：
+    var days = getDateBetWeen(StartDate, GetDate()), 
+        mod = Math.floor(days % 8 / 2);
     return names[mod];
   }
   function GetDetails() { //用来写一些碎碎念的地方，懒得再学了，所以用了非常弱智的方法实现，给出了三行的空间。
@@ -16,7 +17,7 @@
     document.getElementById("Details3").innerHTML = "本来想做一个能够按照所需跳过假期回家值日计算的程序的，然而买不起服务器，没法上传假期时间……就先这样用着罢";
   }
 
-  function customFormat() {
+  function GetDate() {
     var date = new Date();
     var str = "";
     var month = date.getMonth() + 1;
@@ -47,8 +48,9 @@
   }
 
   function GetName() {
-    var truename = Calc(getDateBetWeen(StartDate, customFormat()));
+    var truename = Calc();
     document.getElementById("MyButtom").innerHTML = truename;
+
     document.getElementById("MyImage").width="250";
     document.getElementById("MyImage").height="270";
     document.getElementById("MyImage").src = "https://pic1.imgdb.cn/item/634252d116f2c2beb12c4d9f.jpg";
