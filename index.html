@@ -5,7 +5,7 @@
 <script>
   //可自定义内容：
   names = new Array("高某某", "宋某某", "武某某", "皮某某"); //下标从零开始。
-  StartDate = '2023-07-01'; //日期格式：YYYY-MM-DD
+  StartDate = '2023-07-03'; //日期格式：YYYY-MM-DD
   function Calc() { //计算值日生的算法，参数为开始日期到当前日期的天数：
     var days = getDateBetWeen(StartDate, GetDate()), 
         mod = Math.floor(days % 8 / 2);
@@ -13,7 +13,7 @@
   }
   function GetDetails() { //用来写一些碎碎念的地方，懒得再学了，所以用了非常弱智的方法实现，给出了三行的空间。
     document.getElementById("Details1").innerHTML = "采用的算法大致如下所示：";
-    document.getElementById("Details2").innerHTML = "计算当前天数与 2023-07-01 的天数差，天数差对 8 取余，按照取余结果分配值日生。如余数为 0、1 则高某某，2、3 则宋某某，4、5 则武某某，6、7 则皮某某。";
+    document.getElementById("Details2").innerHTML = "计算当前天数与 2023-07-03 的天数差，天数差对 8 取余，按照取余结果分配值日生。如余数为 0、1 则高某某，2、3 则宋某某，4、5 则武某某，6、7 则皮某某。";
     document.getElementById("Details3").innerHTML = "HTML 现学的，JS 网上抄的，嘻嘻";
   }
 
