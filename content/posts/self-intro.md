@@ -1,8 +1,9 @@
 ---
-title: "关于博主"
-date: 2023-08-29T15:35:29+08:00
-draft: true
+title: "Self Intro"
+date: 2023-08-29T17:57:52+08:00
+draft: false
 ---
+
 
 ![少女祈祷中](https://img.imgdb.cn/item/602cc63a3ffa7d37b345289c.gif)
 
