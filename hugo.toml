@@ -1,0 +1,4 @@
+baseURL = 'https://luckyblock233.github.io/'
+languageCode = 'zh-cn'
+title = 'Luckyblock'
+theme = 'ananke'
