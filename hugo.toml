@@ -1,4 +1,16 @@
 baseURL = 'https://luckyblock233.github.io/'
 languageCode = 'zh-cn'
 title = 'Luckyblock'
-theme = 'ananke'
+theme = 'paper'
+
+disqusShortname = 'YOUR_DISQUS_SHORTNAME'   # use disqus comments
+
+[params]
+  # color style
+  color = 'linen'                           # linen, wheat, gray, light
+
+  # misc
+  disableHLJS = true                        # disable highlight.js
+  disablePostNavigation = true              # disable post navigation
+  monoDarkIcon = true                       # show monochrome dark mode icon
+  math = true                               # enable KaTeX math typesetting globally
