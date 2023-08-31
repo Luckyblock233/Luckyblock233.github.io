@@ -3,9 +3,6 @@ title: "Build Own Website With Hugo"
 date: 2023-09-01T00:31:17+08:00
 draft: false
 ---
-
-[TOC]
-
 ### 写在最前面！
 
 爆进爆进爆进！
@@ -20,13 +17,15 @@ draft: false
 
 ——委员长也能轻松掌握！使用 Hugo 搭建个人网站并发布到 GitHub Pages 指南！
 
-来吧！让我们一起爆进地搭建属于自己的个人网站吧！爆进爆进爆进！
+来吧！让我们一起爆进地搭建属于自己的个人网站吧！
+
+爆进爆进爆进！
 
 ### 写在前面
 
 呃呃 git 我操
 
-倒腾一下午好歹是把网站部署成功了、、、稍微记录一下自己踩过的坑。
+倒腾一下午好歹是把站点部署成功了、、、稍微记录一下自己踩过的坑。
 
 上面是整活。
 
@@ -283,7 +282,7 @@ jobs:
   - `cd Luckyblock233.github.io`。
   - `git add .` 将该文件夹中的内容添加到 git 的暂存区。
   - `git commit -m "Init the website"`：准备将本地仓库的内容合并到远程仓库中，将设置此次合并的信息设置为 `Init the website`。
-  - `git push git@github.com/Luckyblock233/luckyblock233.github.io.git main`：将本地仓库内容 push 合并到远程仓库的 main 分支中。注意不要忘记第三个参数前后的 `git@` 和 `.git`。
+  - `git push git@github.com:Luckyblock233/Luckyblock233.github.io.git main`：将本地仓库内容 push 合并到远程仓库的 main 分支中。注意不要忘记第三个参数前后的 `git@` 和 `.git`。
 
 完成上述步骤后进入 Github 对应仓库的 Actions 界面中即可查看当前部署的进度。当进度完成后使用浏览器访问 [luckyblock233.github.io](luckyblock233.github.io) 即可。
 
@@ -295,10 +294,10 @@ jobs:
 - 检查是否是以管理员身份运行 Git Bash。
 - 安装主题时提示 `Recv failure: Connection was reset`：脸不好，试试挂个梯子。
 - 挂了梯子之后出现 `Github port 443 : Timed out`：见 [https://zhuanlan.zhihu.com/p/636418854](https://zhuanlan.zhihu.com/p/636418854)。
-- 将本地仓库 push 到 Github 中时失败：尝试在 push 之前先执行一句 `git pull git@github.com/Luckyblock233/luckyblock233.github.io.git main` 将远程仓库拉取到本地以同步版本。
-- `git pull` 提示 `fatal: refusing to merge unrelated histories`：[https://zhuanlan.zhihu.com/p/152049408](https://zhuanlan.zhihu.com/p/152049408)。改为指令 `git pull xxxxx xxxxx --allow-unrelated-histories` 即可。
+- 将本地仓库 push 到 Github 中时失败：尝试在 push 之前先执行一句 `git pull git@github.com:Luckyblock233/Luckyblock233.github.io.git main` 将远程仓库拉取到本地以同步版本。
+- `git pull` 提示 `fatal: refusing to merge unrelated histories`：[https://zhuanlan.zhihu.com/p/152049408](https://zhuanlan.zhihu.com/p/152049408)。改为指令 `git pull git@github.com:Luckyblock233/Luckyblock233.github.io.git main --allow-unrelated-histories` 即可。
 
-### 个性化网站
+### 个性化站点
 
 前往 [https://themes.gohugo.io/](https://themes.gohugo.io/) 即可下载多种主题。
 
