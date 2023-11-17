@@ -14,3 +14,7 @@ draft: false
 在高中有着两年的信息竞赛经历，竞赛时期遗作可于 [此处](https://www.cnblogs.com/luckyblock/p/16424637.html) 阅读。
 
 文学爱好者/ACGN/什么书都看/平均水平的休闲玩家/轻微语言洁癖/退圈已久的管人/料理苦手
+
+博主的技术向博客：[https://www.cnblogs.com/luckyblock/](https://www.cnblogs.com/luckyblock/)。
+
+在这里不会发布任何与技术相关的文章，包括算法竞赛的游记。
