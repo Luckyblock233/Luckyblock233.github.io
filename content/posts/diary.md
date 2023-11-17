@@ -16,7 +16,7 @@ draft: false
 
 现在是 11 月 17 日。
 
-[CCPC2023（深圳）游记](https://www.cnblogs.com/luckyblock/p/17829835.html)。
+[CCPC2023（深圳）游记](https://www.cnblogs.com/luckyblock/p/17839853.html)。
 
 可以看十里面的图片。
 
