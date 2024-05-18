@@ -1,5 +1,5 @@
 ---
-title: "Cyber herbalist Doctor"
+title: "Cyber Herbalist Doctor"
 date: 2023-10-31T21:57:52+08:00
 draft: false
 ---
