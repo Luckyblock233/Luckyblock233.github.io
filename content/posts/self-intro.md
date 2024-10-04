@@ -9,7 +9,7 @@ draft: false
 
 常用 **Id：Luckyblock**/**Luckyblock233**  
 
-来自山东某县级小中学，目前大二，在中南大学计科打 ACM。
+来自山东某县级小中学，目前大三，在中南大学计科打 ACM。
 
 在高中有着两年的信息竞赛经历，竞赛时期遗作可于 [此处](https://www.cnblogs.com/luckyblock/p/16424637.html) 阅读。
 
