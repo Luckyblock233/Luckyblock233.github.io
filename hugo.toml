@@ -14,3 +14,8 @@ disqusShortname = 'YOUR_DISQUS_SHORTNAME'   # use disqus comments
   disablePostNavigation = true              # disable post navigation
   monoDarkIcon = true                       # show monochrome dark mode icon
   math = true                               # enable KaTeX math typesetting globally
+
+  # home page profile
+  avatar = '1032041649@qq.com'                 # gravatar email or image url
+  name = 'Luckyblock'
+  bio = 'Drop the diary and take a nap.'
